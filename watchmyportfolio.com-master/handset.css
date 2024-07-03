@@ -1,0 +1,25 @@
+/* .btn-s1-p8 {
+  margin-top: 172px;
+}
+.Box {
+  display: flex;
+  flex-direction: column;
+} */
+.s1-p7 {
+  padding: 50px;
+}
+.container h1 {
+  font-size: 2rem;
+}
+.container p {
+  color: white;
+  font-size: 1rem;
+  margin-top: 0px;
+}
+.container h1 span {
+  color: white;
+}
+.nav-button h3 a {
+  /* margin-left: 20px; */
+  font-size: 15px;
+}
