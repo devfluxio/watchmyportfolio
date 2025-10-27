@@ -9,103 +9,96 @@
   <link rel="stylesheet" href="website.css" />
 </head>
 
-
-<body style="font-family: 'Work Sans', sans-serif; margin: 0; background-color: #f8f9fa;">
-
-  <section id="Navbar-section" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background: #111; color: white;">
-    <div class="s1-p6">
-      <h3 style="margin: 0;">PortFolio</h3>
-    </div>
-    <div class="s1-p7" style="display: flex; gap: 25px;">
-      <div class="nav-button"><h3><a href="#" onclick="showPortFolio()" style="color: white; text-decoration: none;">Home</a></h3></div>
-      <div class="nav-button"><h3><a href="#" onclick="showPortFolio()" style="color: white; text-decoration: none;">About</a></h3></div>
-      <div class="nav-button"><h3><a href="#" onclick="showPortFolio()" style="color: white; text-decoration: none;">Services</a></h3></div>
-      <div id="contact"><h3><a href="#" onclick="showContactForm()" style="color: white; text-decoration: none;">Contact</a></h3></div>
-      <div class="nav-button"><h3><a href="#" onclick="showPortFolio()" style="color: white; text-decoration: none;">PortFolio</a></h3></div>
+<body>
+  <!-- Navbar -->
+  <section id="Navbar-section">
+    <div><h3>PortFolio</h3></div>
+    <div class="nav-links">
+      <h3><a href="#" onclick="showPortFolio()">Home</a></h3>
+      <h3><a href="#" onclick="showPortFolio()">About</a></h3>
+      <h3><a href="#" onclick="showPortFolio()">Services</a></h3>
+      <h3><a href="#" onclick="showContactForm()">Contact</a></h3>
+      <h3><a href="#" onclick="showPortFolio()">PortFolio</a></h3>
     </div>
   </section>
 
-  <section id="Introduction-section" style="padding: 80px 40px; background: linear-gradient(135deg, #1f1c2c, #928dab); color: white; min-height: 90vh;">
-    <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+  <!-- Introduction -->
+  <section id="Introduction-section">
+    <div class="intro-content">
       <div>
-        <h1 style="font-size: 2.5rem;">Hey! I'm <span class="auto-input" style="color: #ffda79;"></span></h1>
-        <p style="font-size: 1.1rem;">Wanna get your website ready? Just Reach me...</p>
+        <h1>Hey! I'm <span class="auto-input"></span></h1>
+        <p>Wanna get your website ready? Just Reach me...</p>
       </div>
       <div>
-        <img src="PngItem_1127587.png" style="width: 250px; border-radius: 20px;" />
+        <img src="PngItem_1127587.png" class="intro-img" />
       </div>
     </div>
-    <div style="margin-top: 40px; text-align: center;">
-      <button type="button" onclick="showContactForm()" style="background: #ffda79; border: none; padding: 12px 25px; border-radius: 8px; font-size: 1rem; margin-right: 10px; cursor: pointer;">Reach me</button>
-      <button type="button" onclick="downloadResume()" style="background: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 1rem; cursor: pointer;">Download CV</button>
+    <div class="intro-buttons">
+      <button type="button" onclick="showContactForm()" class="btn-primary">Reach me</button>
+      <button type="button" onclick="downloadResume()" class="btn-secondary">Download CV</button>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="PortFolio-section" style="display: none; justify-content: center; align-items: center; flex-direction: column; background-color: #fff; min-height: 100vh; text-align: center;">
-    <div>
-      <div style="margin: 20px;">
-        <img src="myPortFoliopic.jpg" style="width: 180px; height: 180px; border-radius: 50%; border: 5px solid #111;" />
+  <!-- Portfolio -->
+  <section id="PortFolio-section">
+    <div class="portfolio-content">
+      <div class="portfolio-image">
+        <img src="myPortFoliopic.jpg" />
       </div>
       <h1>HackerRank: ★★★★★ (C++)</h1>
       <h1>LeetCode: 50+ Questions</h1>
-      <button onclick="homePage()" style="margin-top: 20px; padding: 10px 25px; border: none; background: #111; color: white; border-radius: 8px; cursor: pointer;">Exit</button>
+      <button onclick="homePage()" class="btn-exit">Exit</button>
     </div>
   </section>
 
-  <!-- Contact Form Section -->
-  <div id="contact-form" style="display: none; justify-content: center; align-items: center; min-height: 100vh; background-color: #f5f6fa;">
-    <div style="width: 90%; max-width: 600px; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px;">
-      <div style="text-align: center; margin-bottom: 25px;">
-        <h1 style="margin-bottom: 10px; font-size: 2rem; color: #111;">Contact Me</h1>
-        <p style="color: #777;">Fill up the form below to send me a message.</p>
+  <!-- Contact Form -->
+  <div id="contact-form">
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Contact Me</h1>
+        <p>Fill up the form below to send me a message.</p>
       </div>
 
       <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
         <input type="hidden" name="subject" value="New Submission from Portfolio" />
 
-        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-size: 14px; color: #444;">First Name</label>
-            <input type="text" name="name" placeholder="John" required
-              style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; margin-top: 5px; font-size: 15px;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="name" placeholder="John" required />
           </div>
-          <div style="flex: 1;">
-            <label style="font-size: 14px; color: #444;">Last Name</label>
-            <input type="text" name="last_name" placeholder="Doe" required
-              style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; margin-top: 5px; font-size: 15px;">
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Doe" required />
           </div>
         </div>
 
-        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
-          <div style="flex: 1;">
-            <label style="font-size: 14px; color: #444;">Email</label>
-            <input type="email" name="email" placeholder="you@company.com" required
-              style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; margin-top: 5px; font-size: 15px;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@company.com" required />
           </div>
-          <div style="flex: 1;">
-            <label style="font-size: 14px; color: #444;">Phone</label>
-            <input type="text" name="phone" placeholder="+91 9876543210" required
-              style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; margin-top: 5px; font-size: 15px;">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" name="phone" placeholder="+91 9876543210" required />
           </div>
         </div>
 
-        <div style="margin-bottom: 20px;">
-          <label style="font-size: 14px; color: #444;">Your Message</label>
-          <textarea name="message" rows="5" placeholder="Type your message here..." required
-            style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 8px; margin-top: 5px; font-size: 15px; resize: none;"></textarea>
+        <div class="form-group full">
+          <label>Your Message</label>
+          <textarea name="message" rows="4" placeholder="Type your message here..." required></textarea>
         </div>
 
-        <button type="submit" style="width: 100%; padding: 12px; background: #111; color: white; font-size: 16px; border: none; border-radius: 8px; cursor: pointer;">Send Message</button>
-
-        <div style="text-align: center; margin-top: 15px;">
-          <button type="button" onclick="homePage()" style="background: #ddd; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">Exit</button>
+        <button type="submit" class="btn-submit">Send Message</button>
+        <div class="form-footer">
+          <button type="button" onclick="homePage()" class="btn-exit-light">Exit</button>
         </div>
       </form>
     </div>
   </div>
 
+  <!-- Typed Animation + Scripts -->
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script>
     var typed = new Typed(".auto-input", {

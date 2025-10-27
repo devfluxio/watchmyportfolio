@@ -1,177 +1,260 @@
-/* ✅ Default meta tag hona chahiye (head me add karo)
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-*/
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
 
-/* ---------------------------- */
-/* 📱  Galaxy A03 & Other Phones */
-/* ---------------------------- */
-@media (max-width: 480px) {
-  /* Navbar */
+/* Navbar */
+#Navbar-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+  color: white;
+  flex-wrap: wrap;
+}
+.s1-p7{
+    gap: 10px;
+}
+
+#Navbar-section h3 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffda79;
+}
+
+/* Introduction */
+#Introduction-section {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.intro-content h1 {
+  font-size: 2.5rem;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+}
+
+.intro-img {
+  width: 250px;
+  border-radius: 20px;
+}
+
+.intro-buttons {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #ffda79;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Portfolio */
+#PortFolio-section {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.portfolio-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #111;
+  margin: 20px;
+}
+
+.btn-exit {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Contact Form */
+#contact-form {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f6fa;
+  padding: 20px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-header h1 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #111;
+}
+
+.form-header p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1 1 100%;
+  min-width: 45%;
+}
+
+label {
+  font-size: 14px;
+  color: #444;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 5px;
+  resize: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #333;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-exit-light {
+  background: #ddd;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+
+/* ✅ Responsive till 400px */
+@media (max-width: 400px) {
   #Navbar-section {
     flex-direction: column;
-    height: auto;
-    padding: 10px 0;
+    /* align-items: center; */
+    padding: 2px;
   }
 
-  .s1-p7 {
-    width: 100%;
-    flex-wrap: wrap;
+  .nav-links {
     justify-content: center;
-    font-size: 14px;
-    padding: 5px 0;
+    gap: 10px;
   }
 
-  .s1-p6 {
-    font-size: 20px;
-    margin-bottom: 5px;
+  .intro-content {
+    flex-direction: column;
   }
 
-  /* Image */
-  .image {
-    height: 120px;
-    width: 120px;
-    margin: 10px auto;
-  }
-
-  /* Main container */
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .container h1 {
+  .intro-content h1 {
     font-size: 1.6rem;
-    line-height: 2rem;
   }
 
-  .container p {
-    font-size: 1rem;
+  .intro-content p {
+    font-size: 0.9rem;
   }
 
-  /* Buttons */
-  .btn-s1-p8 {
-    flex-direction: column;
-    align-items: center;
-    margin: 20px auto;
+  .intro-img {
+    width: 150px;
+    margin-top: 15px;
   }
 
-  .btn1,
-  .btn2 {
+  .btn-primary,
+  .btn-secondary {
     width: 80%;
-    max-width: 250px;
-    margin: 8px 0;
-    height: 45px;
-    font-size: 1.2rem;
-  }
-
-  /* Description */
-  .description-detail-section {
-    width: 90%;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  /* Background section */
-  .bg-color {
-    width: 100%;
-    margin: 0;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  /* Footer heading section */
-  .s1-p10 {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .s1-p10 div h1 {
-    font-size: 1.2rem;
-    margin: 5px 0;
-  }
-
-  /* Side panel disable (if any fixed element) */
-  .s1-p2 {
-    position: static;
-    width: 100%;
-    height: auto;
-    box-shadow: none;
-    margin-bottom: 20px;
-  }
-
-  /* Image section in cards */
-  .myImage {
-    height: auto;
-    padding: 15px 0;
-  }
-
-  .image-border {
-    height: 80px;
-    width: 80px;
-  }
-
-  .image-border img {
-    height: 76px;
-    width: 76px;
-  }
-
-  /* Reduce extra negative margins */
-  .bg-color,
-  #Navbar-section,
-  .wave-svg {
-    margin: 0;
-    width: 100%;
-  }
-
-  /* Skill boxes */
-  .skill h1 {
-    font-size: 1rem;
-    padding: 6px 10px;
-  }
-
-  /* Headings */
-  .head-lines {
-    font-size: 1.5rem;
+    max-width: 230px;
+    margin: 8px auto;
+    display: block;
   }
 }
 
-/* ---------------------------- */
-/* 📱  Mid-size Phones / Tablets */
-/* ---------------------------- */
-@media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    width: 85%;
-    margin: 0 auto;
-    text-align: center;
-  }
 
-  .container h1 {
-    font-size: 2rem;
-  }
-
-  .container p {
-    font-size: 1.2rem;
-  }
-
-  .btn-s1-p8 {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .btn1,
-  .btn2 {
-    width: 45%;
-    height: 50px;
-  }
-
-  .s1-p7 {
-    width: 80%;
-  }
-
-  .description-detail-section {
-    width: 90%;
-  }
-}
+/* 💻 Up to 800px (Tablets / Small Laptops) */
