@@ -1,0 +1,177 @@
+/* ✅ Default meta tag hona chahiye (head me add karo)
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*/
+
+/* ---------------------------- */
+/* 📱  Galaxy A03 & Other Phones */
+/* ---------------------------- */
+@media (max-width: 480px) {
+  /* Navbar */
+  #Navbar-section {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .s1-p7 {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .s1-p6 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  /* Image */
+  .image {
+    height: 120px;
+    width: 120px;
+    margin: 10px auto;
+  }
+
+  /* Main container */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .container h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  /* Buttons */
+  .btn-s1-p8 {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 80%;
+    max-width: 250px;
+    margin: 8px 0;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+
+  /* Description */
+  .description-detail-section {
+    width: 90%;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  /* Background section */
+  .bg-color {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  /* Footer heading section */
+  .s1-p10 {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .s1-p10 div h1 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+
+  /* Side panel disable (if any fixed element) */
+  .s1-p2 {
+    position: static;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    margin-bottom: 20px;
+  }
+
+  /* Image section in cards */
+  .myImage {
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .image-border {
+    height: 80px;
+    width: 80px;
+  }
+
+  .image-border img {
+    height: 76px;
+    width: 76px;
+  }
+
+  /* Reduce extra negative margins */
+  .bg-color,
+  #Navbar-section,
+  .wave-svg {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Skill boxes */
+  .skill h1 {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  /* Headings */
+  .head-lines {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------------------------- */
+/* 📱  Mid-size Phones / Tablets */
+/* ---------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  .btn-s1-p8 {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .btn1,
+  .btn2 {
+    width: 45%;
+    height: 50px;
+  }
+
+  .s1-p7 {
+    width: 80%;
+  }
+
+  .description-detail-section {
+    width: 90%;
+  }
+}
