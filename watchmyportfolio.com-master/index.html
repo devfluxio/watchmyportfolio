@@ -154,6 +154,43 @@
       background: white;
       color: black;
     }
+
+    /* Portfolio Section Styles */
+    #PortFolio-section {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .project-card {
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .portfolio-header span {
+        display: inline-block;
+        margin: 5px !important;
+      }
+
+      .portfolio-header div[style*="flex-wrap"] span {
+        flex: 0 0 calc(50% - 20px);
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .portfolio-header div[style*="flex-wrap"] span {
+        flex: 0 0 calc(100% - 20px);
+      }
+    }
   </style>
 </head>
 
@@ -171,9 +208,9 @@
     </div>
 
     <div class="nav-links" id="nav-links">
-      <h3><a href="#" onclick="showPortFolio()">Home</a></h3>
-      <h3><a href="#" onclick="showPortFolio()">About</a></h3>
-      <h3><a href="#" onclick="showPortFolio()">Services</a></h3>
+      <h3><a href="#Introduction-section">Home</a></h3>
+      <h3><a href="#" onclick="showAbout()">About</a></h3>
+      <h3><a href="services.html">Services</a></h3>
       <h3><a href="#" onclick="showContactForm()">Contact</a></h3>
       <h3><a href="#" onclick="showPortFolio()">PortFolio</a></h3>
     </div>
@@ -196,15 +233,178 @@
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="About-section" style="display:none;background:linear-gradient(135deg, #1f1c2c, #928dab);min-height:100vh;padding:40px 20px;color:white;">
+    <div class="about-container" style="max-width:1200px;margin:0 auto;">
+      <div class="about-header" style="text-align:center;margin-bottom:50px;">
+        <h1 style="color:#ffda79;margin-bottom:20px;">About Me</h1>
+        <img src="myPortFoliopic.jpg" style="width:180px;height:180px;border-radius:50%;border:5px solid #ffda79;margin-bottom:20px;" />
+      </div>
+
+      <!-- Education Section -->
+      <div class="about-section" style="background:rgba(255,255,255,0.1);border-radius:15px;padding:25px;margin-bottom:30px;backdrop-filter:blur(10px);">
+        <h2 style="color:#ffda79;margin-bottom:20px;"><i class="fas fa-graduation-cap" style="margin-right:10px;"></i>Education</h2>
+        <div class="timeline" style="position:relative;padding-left:30px;">
+          <div class="timeline-item" style="margin-bottom:25px;position:relative;">
+            <div style="position:absolute;left:-8px;top:0;width:16px;height:16px;background:#ffda79;border-radius:50%;"></div>
+            <h3 style="color:#ffda79;">B.Tech in Computer Science Engineering</h3>
+            <p><i class="fas fa-graduation-cap" style="color:#ffda79;margin-right:8px;"></i>Noida Institute of Engineering & Technology</p>
+          </div>
+          <div class="timeline-item" style="margin-bottom:25px;position:relative;">
+            <div style="position:absolute;left:-8px;top:0;width:16px;height:16px;background:#ffda79;border-radius:50%;"></div>
+            <h3 style="color:#ffda79;">12th Standard</h3>
+            <p>St. Joseph School, Varanasi</p>
+          </div>
+          <div class="timeline-item" style="margin-bottom:25px;position:relative;">
+            <div style="position:absolute;left:-8px;top:0;width:16px;height:16px;background:#ffda79;border-radius:50%;"></div>
+            <h3 style="color:#ffda79;">10th Standard</h3>
+            <p>M.R.D Higher Secondary School</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Skills Section -->
+      <div class="about-section" style="background:rgba(255,255,255,0.1);border-radius:15px;padding:25px;margin-bottom:30px;backdrop-filter:blur(10px);">
+        <h2 style="color:#ffda79;margin-bottom:20px;"><i class="fas fa-laptop-code" style="margin-right:10px;"></i>Technical Skills</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:15px;">
+          <div class="skill-tag" style="background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+            <i class="fab fa-python"></i> Python
+          </div>
+          <div class="skill-tag" style="background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+            <i class="fab fa-js"></i> JavaScript
+          </div>
+          <div class="skill-tag" style="background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+            <i class="fab fa-react"></i> React.js
+          </div>
+          <div class="skill-tag" style="background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+            <i class="fab fa-node"></i> Node.js
+          </div>
+          <div class="skill-tag" style="background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+            <i class="fas fa-server"></i> Express.js
+          </div>
+          <div class="skill-tag" style="background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+            <i class="fas fa-database"></i> MongoDB
+          </div>
+          <div class="skill-tag" style="background:rgba(255,255,255,0.1);padding:10px 20px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+            <i class="fas fa-robot"></i> AI/ML
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Interests Section -->
+      <div class="about-section" style="background:rgba(255,255,255,0.1);border-radius:15px;padding:25px;margin-bottom:30px;backdrop-filter:blur(10px);">
+        <h2 style="color:#ffda79;margin-bottom:20px;"><i class="fas fa-heart" style="margin-right:10px;"></i>Personal Interests</h2>
+        <div class="interests-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:20px;">
+          <div class="interest-item">
+            <h3 style="color:#ffda79;margin-bottom:10px;"><i class="fas fa-music" style="margin-right:10px;"></i>Hobby</h3>
+            <ul style="list-style:none;padding-left:20px;">
+              <li style="margin-bottom:5px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Singing</li>
+              <li style="margin-bottom:5px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Harmonium</li>
+              <li style="margin-bottom:5px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Flute</li>
+            </ul>
+          </div>
+          <div class="interest-item">
+            <h3 style="color:#ffda79;margin-bottom:10px;"><i class="fas fa-book" style="margin-right:10px;"></i>Reading</h3>
+            <ul style="list-style:none;padding-left:20px;">
+              <li style="margin-bottom:5px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Power of Subconscious Mind by Josef Murphy</li>
+              <li style="margin-bottom:5px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Becoming Supernatural by Dr. Joe Dispenza</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:30px;">
+        <button onclick="homePage()" class="btn-primary">Back to Home</button>
+      </div>
+    </div>
+  </section>
+
   <!-- Portfolio -->
   <section id="PortFolio-section" style="display:none;">
-    <div class="portfolio-content" style="text-align:center;">
-      <div style="margin:20px;">
-        <img src="myPortFoliopic.jpg" style="width:180px;height:180px;border-radius:50%;border:5px solid #111;" />
+    <div class="portfolio-content">
+      <div class="portfolio-header" style="text-align:center;margin-bottom:50px;color:#fff;">
+        <div style="margin:20px;">
+          <img src="myPortFoliopic.jpg" style="width:180px;height:180px;border-radius:50%;border:5px solid #111;" />
+        </div>
+        <h1 style="color:#ffda79;margin-bottom:20px;">My Projects</h1>
+        
+        <!-- Coding Profile -->
+        <div style="margin:20px 0;">
+          <span style="background:#ffda79;color:#111;padding:8px 15px;border-radius:20px;margin:0 10px;">HackerRank: ★★★★★ (C++)</span>
+          <span style="background:#ffda79;color:#111;padding:8px 15px;border-radius:20px;margin:0 10px;">LeetCode: 259 Questions</span>
+        </div>
+
+        <!-- Tech Stack -->
+        <div style="margin:30px 0;">
+          <h3 style="color:#ffda79;margin-bottom:15px;">Tech Stack</h3>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:800px;margin:0 auto;">
+            <span style="background:rgba(255,255,255,0.1);color:#fff;padding:8px 15px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fab fa-cpp" style="margin-right:5px;"></i>C++
+            </span>
+            <span style="background:rgba(255,255,255,0.1);color:#fff;padding:8px 15px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fab fa-python" style="margin-right:5px;"></i>Python
+            </span>
+            <span style="background:rgba(255,255,255,0.1);color:#fff;padding:8px 15px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fab fa-js" style="margin-right:5px;"></i>JavaScript
+            </span>
+            <span style="background:rgba(255,255,255,0.1);color:#fff;padding:8px 15px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fas fa-database" style="margin-right:5px;"></i>MongoDB
+            </span>
+            <span style="background:rgba(255,255,255,0.1);color:#fff;padding:8px 15px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fab fa-react" style="margin-right:5px;"></i>React.js
+            </span>
+            <span style="background:rgba(255,255,255,0.1);color:#fff;padding:8px 15px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fab fa-node-js" style="margin-right:5px;"></i>Node.js
+            </span>
+            <span style="background:rgba(255,255,255,0.1);color:#fff;padding:8px 15px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+              <i class="fab fa-node-js" style="margin-right:5px;"></i>Express.js
+            </span>
+          </div>
+        </div>
       </div>
-      <h1>HackerRank: ★★★★★ (C++)</h1>
-      <h1>LeetCode: 50+ Questions</h1>
-      <button onclick="homePage()" class="btn-primary">Exit</button>
+
+      <div class="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:30px;max-width:1200px;margin:0 auto;padding:20px;">
+        <!-- SmartMeet.AI Project -->
+        <div class="project-card" style="background:rgba(255,255,255,0.1);border-radius:15px;padding:25px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);color:#fff;">
+          <h2 style="color:#ffda79;margin-bottom:15px;">SmartMeet.AI</h2>
+          <p style="margin-bottom:15px;line-height:1.6;">Final year project leveraging OpenAI's Whisper model for intelligent meeting transcription and summarization.</p>
+          <ul style="list-style-type:none;padding:0;">
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Real-time speech-to-text transcription</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Automated meeting summary generation</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Minutes of Meeting (MOM) creation</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>AI-powered content analysis</li>
+          </ul>
+        </div>
+
+        <!-- Payment Suno App -->
+        <div class="project-card" style="background:rgba(255,255,255,0.1);border-radius:15px;padding:25px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);color:#fff;">
+          <h2 style="color:#ffda79;margin-bottom:15px;">Payment Suno App</h2>
+          <p style="margin-bottom:15px;line-height:1.6;">Innovative distributed payment system for speaker-less payment confirmation.</p>
+          <ul style="list-style-type:none;padding:0;">
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Multi-device payment audio sync</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Automated receipt generation</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Last 5 transactions history</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Real-time payment confirmation</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Timestamp verification system</li>
+          </ul>
+        </div>
+
+        <!-- Blog Posting App -->
+        <div class="project-card" style="background:rgba(255,255,255,0.1);border-radius:15px;padding:25px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);color:#fff;">
+          <h2 style="color:#ffda79;margin-bottom:15px;">Blog Posting Platform</h2>
+          <p style="margin-bottom:15px;line-height:1.6;">A comprehensive blogging platform with social features and writer's community.</p>
+          <ul style="list-style-type:none;padding:0;">
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Photo blog creation</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Opinion sharing system</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Writers' Corner feature</li>
+            <li style="margin-bottom:8px;"><i class="fas fa-check" style="color:#ffda79;margin-right:8px;"></i>Story publishing platform</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <button onclick="homePage()" class="btn-primary">Back to Home</button>
+      </div>
     </div>
   </section>
 
@@ -223,6 +423,11 @@
         <textarea name="message" rows="4" placeholder="Type your message here..." required
           style="width:100%;padding:10px;border-radius:5px;border:1px solid #ccc;margin-bottom:10px;"></textarea>
         <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+        <a href="https://wa.me/916389785170" target="_blank" style="text-decoration: none; width: 100%; display: block;">
+          <button type="button" class="btn-primary" style="width:100%;margin-top:10px;background:#25D366;display:flex;align-items:center;justify-content:center;gap:10px;">
+            <i class="fab fa-whatsapp" style="font-size:20px;"></i>Contact on WhatsApp
+          </button>
+        </a>
         <button type="button" onclick="homePage()" class="btn-secondary" style="width:100%;margin-top:10px;">Exit</button>
       </form>
     </div>
@@ -254,6 +459,15 @@
       document.getElementById("Introduction-section").style.display = "none";
       document.getElementById("Navbar-section").style.display = "none";
       document.getElementById("contact-form").style.display = "none";
+      document.getElementById("About-section").style.display = "none";
+    }
+
+    function showAbout() {
+      document.getElementById("About-section").style.display = "block";
+      document.getElementById("PortFolio-section").style.display = "none";
+      document.getElementById("Introduction-section").style.display = "none";
+      document.getElementById("Navbar-section").style.display = "none";
+      document.getElementById("contact-form").style.display = "none";
     }
 
     function showContactForm() {
@@ -268,10 +482,11 @@
       document.getElementById("Navbar-section").style.display = "flex";
       document.getElementById("PortFolio-section").style.display = "none";
       document.getElementById("contact-form").style.display = "none";
+      document.getElementById("About-section").style.display = "none";
     }
 
     function downloadResume() {
-      window.location.href = "https://drive.google.com/file/d/1afaqH-u6_y7X-Py1KIdtBfnw-wP1bKNT/view";
+      window.location.href = "https://drive.google.com/file/d/1KMMSlJRbu1ws-HAfTAR-C3kkJo6DCl9g/view?usp=sharing";
     }
   </script>
 </body>
